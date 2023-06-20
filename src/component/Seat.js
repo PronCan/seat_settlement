@@ -53,11 +53,16 @@ const Sheet = () => {
             }
             {
               arr.map(obj => {
-                obj.map((obj2, key) => {
-                  console.log('obj2', obj2, 'key', key)
-                  return <div className='seat_num'>
-                      <span key={key}>{obj2}</span>
-                  </div>
+                return obj.map((obj2, key) => {
+                  if(key === 0) {
+                    return (
+                      <div className='wrap_seat_num' id={key}>
+                          <span className='seat_num'>{obj2}</span>
+                      </div>
+                    )
+                  } else {
+                    return (<span className='seat_num'>{obj2}</span>)
+                  }
                 })
               })
             }

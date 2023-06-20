@@ -1,10 +1,12 @@
 .seat_num {
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
     border: 1px solid #000;
 }
 
 .wrap_seat_num {
+    display: flex;
+
     width: 80%;
     height: 50%;
     border: 1px solid rgb(0,0,255);
