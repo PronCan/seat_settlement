@@ -4,7 +4,7 @@ import Seat from './Seat'
 const Main = () => {
   return (
     <div>
-      <h1>뮤지컬 자리 정산 시트</h1>
+      {/* <h1>뮤지컬 자리 정산 시트</h1> */}
       <form action='#'>
         <select name='theater' id='theater'>
           <option value="select">선택</option>

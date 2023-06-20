@@ -1,4 +1,11 @@
 .seat_num {
-    width: auto;
+    width: 50px;
+    height: 50px;
     border: 1px solid #000;
+}
+
+.wrap_seat_num {
+    width: 80%;
+    height: 50%;
+    border: 1px solid rgb(0,0,255);
 }

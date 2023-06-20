@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { DataContext } from './Context'
 
 import "../css/seat.scss"
@@ -20,9 +20,13 @@ const Sheet = () => {
 
     var arr = create2DArray(row_cnt, col_cnt)
 
+    useEffect(() => {
+      
+    })
+
   return (
     <div>
-        <div className='seat_num'>
+        <div className='wrap_seat_num'>
             {/* {
                 seat.map((obj, key) => {
                   var temp = obj.split('')
@@ -40,21 +44,21 @@ const Sheet = () => {
                 })
             } */}
             {
-                seat.filter((obj, key) => {
-                  var temp = obj.split('')
-                  for(var i=0; i<temp.length; i++) {
-                    arr[key][i] = temp[i];
-                  }
-                })
+              seat.filter((obj, key) => {
+                var temp = obj.split('')
+                for(var i=0; i<temp.length; i++) {
+                  arr[key][i] = temp[i];
+                }
+              })
             }
             {
-              arr.map((obj) => {
-                console.log('aa', obj)
-                for(var i=0; i<row_cnt; i++) {
-                    <span className='seat_num'>
-                      {obj[i]}
-                    </span>
-                }
+              arr.map(obj => {
+                obj.map((obj2, key) => {
+                  console.log('obj2', obj2, 'key', key)
+                  return <div className='seat_num'>
+                      <span key={key}>{obj2}</span>
+                  </div>
+                })
               })
             }
         </div>
